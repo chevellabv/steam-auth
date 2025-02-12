@@ -127,7 +127,9 @@ class SteamAuth
                 'method' => 'POST',
                 'header' => "Accept-language: en\r\n".
                 "Content-type: application/x-www-form-urlencoded\r\n".
-                'Content-Length: '.strlen($data)."\r\n",
+                'Content-Length: '.strlen($data)."\r\n".
+                "Referer: https://steamcommunity.com/\r\n".
+                "Origin: https://steamcommunity.com\r\n",
                 'content' => $data,
             ],
         ]);
